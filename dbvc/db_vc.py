@@ -2,10 +2,10 @@ import os
 from json import dump, load
 
 import fire
-from database_update import upgrade
+from .database_update import upgrade
 from pretty_logging import pretty_logger
 
-from utils import work_dir, _get_path_work_dir, _get_path_history, _get_path_sqlscripts, _check_dir_exist
+from .utils import work_dir, _get_path_work_dir, _get_path_history, _get_path_sqlscripts, _check_dir_exist
 
 class Db_vc(object):
     def upgrade(self):

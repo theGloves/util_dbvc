@@ -5,7 +5,7 @@ from json import loads
 from sqlalchemy import create_engine
 from pretty_logging import pretty_logger
 
-from utils import work_dir, _get_path_work_dir, _get_path_history, _get_path_sqlscripts, _check_dir_exist
+from .utils import work_dir, _get_path_work_dir, _get_path_history, _get_path_sqlscripts, _check_dir_exist
 
 # 起源种子
 init_version = "85ca7af0-ae78-11e9-afd6-525400f7cc8d"

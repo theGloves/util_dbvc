@@ -35,6 +35,12 @@ def get_update_list(current_version):
     pretty_logger.info("lastest db version: {}".format(latest))
     history = js_data["history"]
     
+    # 如果当前数据库版本不在历史里，也不是初始版本号，报错&退出
+    if current_version != init_version and current_version not in history:
+        pretty_logger.error("database version not in history. no action in this scripts.")
+        return file_list
+
+    
     # 递归遍历
     while latest!=current_version and latest != init_version:
         if history[latest]["auto"]:
